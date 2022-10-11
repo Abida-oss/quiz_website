@@ -21,6 +21,22 @@ const Ques = () => {
               browser URL, and keeps the UI in sync with the URL.
             </Accordion.Body>
           </Accordion.Item>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>How does context API works?</Accordion.Header>
+            <Accordion.Body className="ques">
+              The React Context API is a way for a React app to effectively
+              produce global variables that can be passed around. The new React
+              Context API, introduced with React v.16.3, allows us to pass data
+              through our component trees, giving our components the ability to
+              communicate and share data at different levels.
+              React.createContext() is all you need. It returns a consumer and a
+              provider. Provider is a component that as it's names suggests
+              provides the state to its children. It will hold the "store" and
+              be the parent of all the components that might need that store.
+              Consumer as it so happens is a component that consumes and uses
+              the state.
+            </Accordion.Body>
+          </Accordion.Item>
           
         </Accordion>
       </div>
