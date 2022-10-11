@@ -5,7 +5,6 @@ import QuizInfo from "../QuizInfo/QuizInfo";
 const Quiz = () => {
   const quizes = useLoaderData();
   const { data } = quizes;
-
   const { questions } = data;
   //   console.log(questions);
   return (

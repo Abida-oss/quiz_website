@@ -2,8 +2,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Cards from "./components/Cards/Cards";
 import Nab from "./components/Nab/Nab";
+import Ques from "./components/Ques/Ques";
 import Quiz from "./components/Quiz/Quiz";
 import Statistics from "./components/Statistics/Statistics";
+
 
 import Main from "./layout/Main";
 
@@ -23,17 +25,18 @@ function App() {
         },
         {
           path: "/Statistics",
-          loader: async () => {
-            return fetch("https://openapi.programming-hero.com/api/quiz");
-          },
           element: <Statistics></Statistics>,
         },
         {
-          path: "/Cards/:quizzId",
+          path: "/Ques",
+          element:<Ques></Ques>,
+        },
+        {
+          path: "/Cards/:quizId",
           loader: async ({ params }) => {
             console.log();
             return fetch(
-              `https://openapi.programming-hero.com/api/quiz/${params.quizzId}`
+              `https://openapi.programming-hero.com/api/quiz/${params.quizId}`
             );
           },
           element: <Quiz></Quiz>,

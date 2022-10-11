@@ -8,9 +8,7 @@ const Cards = () => {
   return (
     <div>
       {data.map(quiz => (
-        <CardsInfo
-          key={quiz.id}
-          quiz={quiz}></CardsInfo>
+        <CardsInfo key={quiz.id} quiz={quiz}></CardsInfo>
       ))}
     </div>
   );
