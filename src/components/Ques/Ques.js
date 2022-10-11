@@ -37,7 +37,16 @@ const Ques = () => {
               the state.
             </Accordion.Body>
           </Accordion.Item>
-          
+          <Accordion.Item eventKey="2">
+            <Accordion.Header>What is useRef()?</Accordion.Header>
+            <Accordion.Body className="ques">
+              The useRef is a hook that allows to directly create a reference to
+              the DOM element in the functional component. useRef returns a
+              mutable ref object whose .current property is initialized to the
+              passed argument (initialValue). The returned object will persist
+              for the full lifetime of the component.
+            </Accordion.Body>
+          </Accordion.Item>
         </Accordion>
       </div>
     );
