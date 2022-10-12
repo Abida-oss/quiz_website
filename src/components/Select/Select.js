@@ -1,22 +1,32 @@
 import React from 'react';
 import Form from "react-bootstrap/Form";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Select = (props) => {
+  const notify = (value) => {
+    toast(value);
+  }
 
-    let test = (e) => {
-        // console.log(e.target.getAttribute('results'));
-        // console.log(props.correctAnswer);
-        if (e.target.getAttribute('results') === props.correctAnswer) {
-            alert('Correct')
-        }
-        else{alert("Wrong");}
+  let answer = (e) => {
 
+    if (e.target.getAttribute('ans') === props.correctAnswer) {
+      notify('Your selected answer is correct')
     }
+    else {
+
+      notify('Your selected answer is wrong')
+        ;
+    }
+
+  }
   return (
-    <div>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check name="quiz" type="radio" label={props.option} onClick={test} results={props.option} inline />
-      </Form.Group>
+    <div className="col-12 col-md-6 col-lg-6">
+    <div className="card bg-secondary text-white p-2 w-75">
+      <Form.Group className="mb-2" controlId="formBasicCheckbox">
+        <Form.Check name="quiz" type="radio" label={props.option} onClick={answer} results={props.option} inline />
+      </Form.Group><ToastContainer />
+    </div>
     </div>
   );
 };

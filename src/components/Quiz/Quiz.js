@@ -9,8 +9,9 @@ const Quiz = () => {
   //   console.log(questions);
   return (
     <div>
+      <h1 style={{paddingBottom:'2rem'}}>{data.name}</h1>
       {questions.map(ques => (
-        <QuizInfo key={ques.id} ques={ques} Data={data}></QuizInfo>
+        <QuizInfo key={ques.id} ques={ques}></QuizInfo>
       ))}
     </div>
   );
