@@ -44,6 +44,10 @@ function App() {
         },
       ],
     },
+    {
+      path: "*",
+      element: <div> <h1>Page is not found</h1></div>,
+    },
   ]);
   return (
     <div className="App">
