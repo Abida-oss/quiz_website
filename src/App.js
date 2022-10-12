@@ -5,8 +5,8 @@ import Nab from "./components/Nab/Nab";
 import Ques from "./components/Ques/Ques";
 import Quiz from "./components/Quiz/Quiz";
 import Statistics from "./components/Statistics/Statistics";
-
-
+import logo from "./images/index1.jpg";
+import Card from 'react-bootstrap/Card';
 import Main from "./layout/Main";
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
       path: "/",
       element: <Main></Main>,
       children: [
+        { path: "/", element: <div><Card.Img className='img' src={logo} /> </div> },
         { path: "nav", element: <Nab></Nab> },
         {
           path: "/Cards",
