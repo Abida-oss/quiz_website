@@ -6,6 +6,7 @@ import {
   XAxis,
   YAxis,
   CartesianGrid,
+  ResponsiveContainer,
   Tooltip,
 } from "recharts";
 
@@ -41,6 +42,8 @@ const Statistics = () => {
     return (
       <div className="style">
         <h3>Total Quiz</h3>
+        <ResponsiveContainer width="80%" aspect={3}>
+
         <LineChart
           width={450}
           height={350}
@@ -58,6 +61,8 @@ const Statistics = () => {
           <YAxis />
           <Tooltip></Tooltip>
         </LineChart>
+        </ResponsiveContainer>
+
       </div>
     );
 };

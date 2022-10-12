@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { Button } from 'react-bootstrap';
 
-const QuizInfo = ({ ques }) => {
-    const { question, options, correctAnswer } = ques;
+const QuizInfo = (props) => {
+    const { question, options, correctAnswer } = props.ques;
     const handleClick = (e) => {
         e.preventDefault();
         alert(correctAnswer);
@@ -15,6 +15,7 @@ const QuizInfo = ({ ques }) => {
     return (
       <div>
         <Card>
+        <h1>{props.Data.name}</h1>
           <Card.Header as="h5">
             {question}
             <Button onClick={handleClick}>

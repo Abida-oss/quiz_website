@@ -7,6 +7,7 @@ const Cards = () => {
   // console.log(data);
   return (
     <div>
+      <h1 style={{paddingTop:'2rem'}}>All Quizes</h1>
       {data.map(quiz => (
         <CardsInfo key={quiz.id} quiz={quiz}></CardsInfo>
       ))}

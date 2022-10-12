@@ -15,7 +15,7 @@ const Nab = () => {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ms-auto">
                 <Link to="/Cards" className="navcol">
-                  Cards
+                  Quizes
                 </Link>
                 <Link to="/Statistics" className="navcol">
                   Statistics
