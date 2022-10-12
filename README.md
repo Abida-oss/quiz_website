@@ -23,5 +23,9 @@ You can add quiz topic and quizes on different programming languages. If you are
 
 ### Github Link
 
+https://github.com/programming-hero-web-course2/b6-quiz-crackerz-Abida-oss
+
 ### Netlify Link
+
+https://gilded-speculoos-b750c7.netlify.app/
 
