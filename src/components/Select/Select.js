@@ -10,23 +10,23 @@ const Select = (props) => {
 
   let answer = (e) => {
 
-    if (e.target.getAttribute('ans') === props.correctAnswer) {
+    if (e.target.getAttribute('results') === props.correctAnswer) {
       notify('Your selected answer is correct')
     }
     else {
 
       notify('Your selected answer is wrong')
-        ;
+  
     }
 
   }
   return (
     <div className="col-12 col-md-6 col-lg-6">
-    <div className="card bg-secondary text-white p-2 w-75">
-      <Form.Group className="mb-2" controlId="formBasicCheckbox">
-        <Form.Check name="quiz" type="radio" label={props.option} onClick={answer} results={props.option} inline />
-      </Form.Group><ToastContainer />
-    </div>
+      <div className="card bg-secondary text-white p-2 w-75">
+        <Form.Group className="mb-2" controlId="formBasicCheckbox">
+          <Form.Check onClick={answer} name="quiz" type="radio" label={props.option} results={props.option} inline />
+        </Form.Group><ToastContainer />
+      </div>
     </div>
   );
 };
